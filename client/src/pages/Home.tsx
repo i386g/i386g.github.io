@@ -18,7 +18,8 @@ const Home = () => {
         }
         case "ArrowDown":
         case "ArrowRight":
-        case "PageDown": {
+        case "PageDown":
+        case " ": {
           e.preventDefault();
           reference?.current?.scrollBy({
             top: window.innerHeight,
