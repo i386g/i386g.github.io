@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2020": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-refresh"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json", "./tsconfig.node.json"],
+    "tsconfigRootDir": "client"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "eqeqeq": "error",
+    "no-var": "error",
+    "no-shadow": "error",
+    "no-catch-shadow": "error",
+    "no-param-reassign": "error",
+    "no-shadow-restricted-names": "error",
+    "prefer-const": "error",
+    "prefer-template": "error",
+    "consistent-return": "error",
+    "max-len": ["error", { "code": 120 }],
+    "no-constant-binary-expression": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ],
+    "react/react-in-jsx-scope": "off"
+  }
+}
